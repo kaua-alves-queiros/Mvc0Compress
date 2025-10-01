@@ -19,6 +19,12 @@ namespace Mvc0Compress.RLE
 
     public static class RLE
     {
+        /// <summary>
+        /// Compresses a string using Run-Length Encoding (RLE).
+        /// Ex: "aaabbc" becomes "3a2b1c"
+        /// </summary>
+        /// <param name="input">The input string to be compressed.</param>
+        /// <returns>The compressed string.</returns>
         public static string Compress(string input)
         {
             if (string.IsNullOrEmpty(input))
@@ -47,6 +53,12 @@ namespace Mvc0Compress.RLE
             return compressed.ToString();
         }
 
+        /// <summary>
+        /// Decompresses a string encoded with Run-Length Encoding (RLE).
+        /// Ex: "3a2b1c" becomes "aaabbc"
+        /// </summary>
+        /// <param name="compressed">The compressed input string.</param>
+        /// <returns>The decompressed string.</returns>
         public static string Decompress(string compressed)
         {
             if(string.IsNullOrEmpty(compressed))
